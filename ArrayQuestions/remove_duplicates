@@ -1,0 +1,14 @@
+int removeDuplicates(vector<int>& nums) {
+        int c=0;
+        int x=nums[c];
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]!=x){
+                c++;
+                nums[c]=nums[i];
+                x=nums[c];
+            }
+        }
+        return c+1;
+    }
+
+[BEST SOLUTION ACC TO LC]
