@@ -1,0 +1,23 @@
+int findFloor(vector<long long> v, long long n, long long x)
+    {
+        
+        // Your code here
+        int first = 0;
+        int last = v.size() - 1;
+        int mid = (first + last)/2;
+        int ans;
+        
+        while (last >= first)
+        {
+            if(mid >= x)
+            {
+                ans = mid;
+                last = mid -1;
+            }
+            else
+            {
+                first = mid +1;
+            }
+        }
+        return ans;
+    }
