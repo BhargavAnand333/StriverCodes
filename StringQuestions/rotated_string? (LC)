@@ -1,0 +1,26 @@
+bool rotateString(string s, string goal) {
+
+        if(s.length() != goal.length())
+        {
+            return false;
+        }
+        int n=s.length();
+        
+        for(int shift=0; shift < n; shift++)
+        {
+            bool isRotation = true;
+            for(int i =0; i<n; i++)
+            {
+                if(s[i] != goal[(shift+i)%n])
+                {
+                    isRotation = false;
+                    break;
+                }
+            }
+            if(isRotation)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
